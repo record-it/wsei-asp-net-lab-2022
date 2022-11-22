@@ -6,10 +6,17 @@ namespace wsei_asp_net_lab.Models;
 public class AppDbContext: DbContext
 {
     public DbSet<Book> Books { get; set; }
+    private string DbPath;
+    public AppDbContext()
+    {
+        var folder = Environment.SpecialFolder.LocalApplicationData;
+        var path = Environment.GetFolderPath(folder);
+        DbPath = System.IO.Path.Join(path, "books.db");
+    }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data source = c:\\data\\books.db");
+        optionsBuilder.UseSqlite($"Data Source={DbPath}");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
