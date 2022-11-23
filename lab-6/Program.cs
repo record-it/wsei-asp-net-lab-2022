@@ -1,4 +1,5 @@
-using lab_5_solution.Models;
+using lab_6.Models;
+using lab6.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
