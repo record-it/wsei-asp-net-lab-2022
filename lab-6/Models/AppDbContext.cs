@@ -1,7 +1,7 @@
 ﻿using lab_6.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace lab6.Models;
+namespace lab_6.Models;
 
 public class AppDbContext: DbContext
 {

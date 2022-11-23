@@ -1,5 +1,4 @@
 using lab_6.Models;
-using lab6.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
