@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace lab_5_solution.Models;
+namespace lab_6.Models;
 [Table("Authors")]
 public class Author
 {

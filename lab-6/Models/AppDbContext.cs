@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using lab_6.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace lab_5_solution.Models;
+namespace lab6.Models;
 
 public class AppDbContext: DbContext
 {
@@ -14,6 +15,12 @@ public class AppDbContext: DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Book>()
+            .HasKey(b => b.Id);
+        modelBuilder.Entity<Book>()
+            .HasMany<Author>(b => b.Authors)
+            .WithMany(a => a.Books)
+            .UsingEntity(j => j.ToTable("BooksAuthors"));
         modelBuilder.Entity<Book>().HasData(
             new Book() {Id= 1, Title = "ASP.NET 6.0.0", ReleaseDate = DateTime.Parse("2022-02-13"), Created = DateTime.Now},
             new Book() {Id= 2, Title = "C# 10.0", ReleaseDate = DateTime.Parse("2022-02-13"), Created = DateTime.Now},
