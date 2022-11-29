@@ -13,7 +13,8 @@ public class AppDbContext: DbContext
         var path = Environment.GetFolderPath(folder);
         DbPath = System.IO.Path.Join(path, "books.db");
     }
-
+    
+    
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlite($"Data Source={DbPath}");

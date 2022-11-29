@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
 namespace lab_6.Models;
 [Table("Authors")]
@@ -12,9 +13,8 @@ public class Author
     [Column("first_name")]
     [StringLength(30)]
     public string FirstName { get; set; }
-    [Column("last_name")]
-    [Required]
-    [StringLength(20)]
+
+    [Column("last_name"), Required, StringLength(20)]
     public string LastName { get; set; }
     [Column("pesel")]
     [StringLength(11)]
