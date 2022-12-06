@@ -11,13 +11,6 @@ public class AppDbContext: DbContext
     public AppDbContext(DbContextOptions options) : base(options)
     {
     }
-
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlite("Data source = c:\\data\\books.db");
-    }
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Book>().HasData(
@@ -40,9 +33,6 @@ public class AppDbContext: DbContext
                 new {BooksId = 2, AuthorsId = 3},
                 new {BooksId = 3, AuthorsId = 2}
                 ));
-        modelBuilder.Entity<Book>()
-            .Property(b => b.Created)
-            .HasDefaultValueSql("datetime()");
     }
     
     

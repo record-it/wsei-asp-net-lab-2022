@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(
-    options => options.UseSqlite(builder.Configuration["Data:ConnectionString"]));
+    options => options.UseSqlServer(builder.Configuration["Data:Connection"]));
 builder.Services.AddScoped<IBookService, BookRepositoryEF>();
 builder.Services.AddSingleton<IClockProvider, DefaultClock>();
 var app = builder.Build();
