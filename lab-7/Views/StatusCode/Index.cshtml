@@ -1,0 +1,26 @@
+@model int
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Status Code</title>
+</head>
+<body>
+<div>
+    @switch (@Model)
+    {
+        case 404:
+            <h1>Nie mamy pańskiego płaszcza i co nam Pan zrobi </h1>
+            break;
+        case 400:
+            <h1>Nie kombinuj</h1>
+            break;
+    }
+</div>
+</body>
+</html>
