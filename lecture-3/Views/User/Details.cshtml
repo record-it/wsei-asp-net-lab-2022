@@ -1,0 +1,21 @@
+@model UserDetails
+@{
+    Layout = "_Layout";
+}
+<h2>Szczegóły osoby</h2>
+<p>Imię: @Model.Name</p>
+<p>Emial: @Model.Email</p>
+<p>Pensja: @Model.Salary</p>
+<p>Telefon: @Model.Telephone</p>
+<p>Liczba kotów: @(Model.NumberOfCats != null ? Model.NumberOfCats : "brak danych")</p>
+@if (@Model.FavoriteColor != null)
+{
+    <p>Ulubione kolory:</p>
+    <ul>
+        @foreach (var color in @Model.FavoriteColor)
+        {
+            <li>@color</li>
+        }
+    </ul>
+}
+<a asp-action="Index" asp-controller="User">Index</a>

@@ -1,0 +1,55 @@
+@model lecture_3.Models.UserDetails
+@{
+    Layout = "_Layout";
+}
+
+<h2>Szczegóły osoby</h2>
+<form method="post" asp-action="Create" asp-controller="User">
+    <input class="form-control" asp-for="PersonId"/><br/>
+ 
+    <label asp-for="Name"></label>
+    <input class="form-control" asp-for="Name"/><br/>
+    <div><span asp-validation-for="Name" class="text-danger"></span></div>
+    
+    <label asp-for="Email"></label>
+    <input class="form-control" asp-for="Email"/><br/>
+    <div><span asp-validation-for="Email" class="text-danger"></span></div>
+    
+    <label asp-for="Password"></label>
+    <input class="form-control" asp-for="Password"/><br/>
+    <div><span asp-validation-for="Password" class="text-danger"></span></div>
+    
+    <label asp-for="Telephone"></label>
+    <input class="form-control" asp-for="Telephone"/><br/>
+      <div><span asp-validation-for="Telephone" class="text-danger"></span></div>
+    
+    <label asp-for="Website"></label>
+    <input class="form-control" asp-for="Website"/><br/>
+    <div><span asp-validation-for="Website" class="text-danger"></span></div>  
+    
+    <label asp-for="DateOfBirth"></label>
+    <input class="form-control" asp-for="DateOfBirth"/><br/>
+    <div><span asp-validation-for="DateOfBirth" class="text-danger"></span></div>
+    
+    <label asp-for="Salary"></label>
+    <input class="form-control" asp-for="Salary"/><br/>
+    <div><span type="number" asp-validation-for="Salary" class="text-danger"></span></div>
+    
+    <label asp-for="SendSpam"></label>
+    <input  asp-for="SendSpam"/><br/>
+      <div><span asp-validation-for="SendSpam" class="text-danger"></span></div>
+
+    <label asp-for="NumberOfCats"></label>
+    <input class="form-control" asp-for="NumberOfCats"/><br/>
+      <div><span asp-validation-for="NumberOfCats" class="text-danger"></span></div>
+    
+    <label asp-for="Selfie"></label>
+    <input class="form-control" asp-for="Selfie"/><br/>
+    <div><span asp-validation-for="Selfie" class="text-danger"></span></div>
+    
+    <label asp-for="FavoriteColor"></label>
+    <select class="form-control" asp-for="FavoriteColor" asp-items=@ViewBag.Colors></select><br/>
+      <div><span asp-validation-for="FavoriteColor" class="text-danger"></span></div>
+    
+    <button class="btn btn-primary" type="submit">Zapisz</button>
+</form>

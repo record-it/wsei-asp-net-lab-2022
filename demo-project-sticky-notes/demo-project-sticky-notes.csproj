@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-lab_9-D6CB0954-F1AE-405B-91A0-D3AA93B87B47</UserSecretsId>
+        <RootNamespace>lab_9</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.12" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.12" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.12" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
+    </ItemGroup>
+
+</Project>

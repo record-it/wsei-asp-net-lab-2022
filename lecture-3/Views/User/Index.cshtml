@@ -1,0 +1,35 @@
+@model IEnumerable<lecture_3.Models.UserDetails> 
+@{
+    Layout = "_Layout";
+}
+
+<ul>
+    <li>
+        <a asp-action="Create" asp-controller="User">Create</a>
+    </li>
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var user in @Model)
+            {
+                <tr>
+                    <td>
+                        @user.Name        
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-controller="User" asp-route-id=@user.PersonId>Edit</a> |
+                        <a asp-action="Details" asp-controller="User" asp-route-id=@user.PersonId>Details</a>|
+                        <a asp-action="Delete" asp-controller="User" asp-route-id=@user.PersonId>Delete</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</ul>
