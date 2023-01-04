@@ -93,7 +93,10 @@ public class BookRepositoryEF: IBookService
 
     public Book? FindBy(int? id)
     {
-        return id is null ? null : _context.Books.Include(b => b.Authors).FirstOrDefault(b => b.Id == id);
+        Book? book = _context.Books.Include(b => b.Authors).FirstOrDefault(b => b.Id == id);
+        _context.Entry(book).State = EntityState.Detached;
+        return id is null ? null : book;
+        
     }
 
     public IEnumerable<Book?> FindAll()

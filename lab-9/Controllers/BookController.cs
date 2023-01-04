@@ -9,10 +9,12 @@ namespace lab_9.Controllers
     {
         private readonly IBookService _bookService;
         private readonly IClockProvider _clock;
-        public BookController(AppDbContext context, IBookService bookService, IClockProvider clock)
+        private readonly IHubContext<ChatHub> _hub;
+        public BookController(AppDbContext context, IBookService bookService, IClockProvider clock, IHubContext<ChatHub> hub)
         {
             _bookService = bookService;
             _clock = clock;
+            _hub = hub;
         }
         public IActionResult Index()
         {
@@ -43,6 +45,7 @@ namespace lab_9.Controllers
             if (ModelState.IsValid)
             {
                 book = await _bookService.SaveAsync(book);
+                _hub.Clients.All.SendAsync("message", "server", "refresh");
                 return RedirectToAction(nameof(Index));
             }
             return View(book);
