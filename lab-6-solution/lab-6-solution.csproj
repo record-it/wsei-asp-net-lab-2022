@@ -15,7 +15,4 @@
         </PackageReference>
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.10" />
     </ItemGroup>
-    <ItemGroup>
-      <ProjectReference Include="..\lecture-5\lecture-2.csproj" />
-    </ItemGroup>
 </Project>
