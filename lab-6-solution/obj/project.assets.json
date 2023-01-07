@@ -3707,23 +3707,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
-      },
-      "lecture-2/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "7.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.0"
-        },
-        "compile": {
-          "bin/placeholder/lecture-2.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/lecture-2.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -10407,11 +10390,6 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
-    },
-    "lecture-2/1.0.0": {
-      "type": "project",
-      "path": "../lecture-5/lecture-2.csproj",
-      "msbuildProject": "../lecture-5/lecture-2.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10420,8 +10398,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.10",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10",
-      "lecture-2 >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.10"
     ]
   },
   "packageFolders": {
@@ -10456,11 +10433,7 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {
-            "C:\\Users\\cs\\RiderProjects\\wsei-asp-net-lab\\lecture-5\\lecture-2.csproj": {
-              "projectPath": "C:\\Users\\cs\\RiderProjects\\wsei-asp-net-lab\\lecture-5\\lecture-2.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
