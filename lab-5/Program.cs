@@ -8,7 +8,7 @@ namespace lab_5.Program
 
             // Konfiguracja serwisu kontenera DI.
             builder.Services.AddControllersWithViews();         
-
+            
             var app = builder.Build();
 
             // Konfiguracja warstw pośrednich.
