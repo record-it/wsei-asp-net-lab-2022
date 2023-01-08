@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab-5", "lab-5\lab-5.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab-5-solution", "lab-5-solution\lab-5-solution.csproj", "{8D89BC2E-56CF-493D-B4D3-33A8D0CC96E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lecture-2", "lecture-5\lecture-2.csproj", "{FCEAFF17-C3FC-47BE-B733-1618DD1B16DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lecture-2", "lecture-2\lecture-2.csproj", "{FCEAFF17-C3FC-47BE-B733-1618DD1B16DF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab-6", "lab-6\lab-6.csproj", "{907B0978-2351-43AF-8F61-6C87FC20E42D}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab-9", "lab-9\lab-9.csproj", "{8FA98265-DB65-41A5-B9DF-296A3E38E7A7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lab-9-test", "lab-9-test\lab-9-test.csproj", "{79126A2A-09BB-4564-B3CE-B395B0EAC9C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lecture-4", "lecture-4\lecture-4.csproj", "{C01D1FA3-3A47-45D6-865A-737BBB6AC8D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{79126A2A-09BB-4564-B3CE-B395B0EAC9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79126A2A-09BB-4564-B3CE-B395B0EAC9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79126A2A-09BB-4564-B3CE-B395B0EAC9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C01D1FA3-3A47-45D6-865A-737BBB6AC8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C01D1FA3-3A47-45D6-865A-737BBB6AC8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C01D1FA3-3A47-45D6-865A-737BBB6AC8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C01D1FA3-3A47-45D6-865A-737BBB6AC8D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
